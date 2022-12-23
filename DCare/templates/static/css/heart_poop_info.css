@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'KorailRoundGothicBold';
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#DCare {
+    overflow:scroll;
+    margin: 0 auto;
+    width: 40%;
+    height: 100%;
+    background-color: 	#BFE9F9;
+}
+
+#DCare::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+#content {
+    text-align: center;
+    padding: 5%;
+}
+
+.info {
+    margin: 10%;
+    width:70%;
+    min-height:450px;
+    background-color:white;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    padding: 5%;
+}
+
+#shiba {
+    /*margin:auto*/
+    border:none;
+    margin-left: 35%;
+    margin-right: 5%;
+}
+#shiba_speak{
+    /*vertical-align: top;*/
+    padding-left: 1px;
+}
+table {
+    text-align: center;
+    margin:auto;
+    padding:auto;
+}
+td {
+    padding-top:5%;
+    padding-bottom:10%;
+    line-height: 150%;
+}
+#long_text{
+    word-break:break-all
+}
+#img_btn{
+    background-color:white;
+    border: none;
+    cursor: pointer;
+}
+#home_btn{
+    font-family: 'KorailRoundGothicBold';
+    background-color:pink;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#img_btn:hover{
+    background:lightgray;
+}
+#home_btn:hover{
+    background:lightgray;
+}
+.btn {
+    border-radius: 10px;
+}

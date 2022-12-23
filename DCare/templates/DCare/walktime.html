@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DCare</title>
+        <link rel="stylesheet" href="../static/css/walk.css" />
+        <script src="../static/javascript/today_set.js"></script>
+    </head>
+    <body>
+        <div id='DCare'>
+            <img src="../static/images/로고글씨.png" width="200px">
+            <div id="content">
+                <table id='shiba' >
+                    <tr><!-- 첫번째 줄 시작 -->
+                        <td><img src="../static/images/시바모음/시바흐규.png" width="170px"></td>
+                        <td id='shiba_speak'>벌써 끝..</br>아쉬워요..</td>
+                    </tr>
+                </table>                
+
+                <div class="info" style="margin: 10%;">
+                </br>
+                    오늘의 산책 시간을 기록해 주세요
+                    </br></br>
+                    <table style="word-break:break-all">
+                        <tr><!-- 첫번째 줄 시작 -->
+                            <td>
+                            </td>
+                        </tr>
+                        <tr><!-- 두번째 줄 시작 -->
+                            <td>
+                                 <form id="walk_time_input">
+                                    <p><input type="date" id="walk_date"></p>
+                                    <p><input type="number" min="0" max="24">&nbsp시간</p>
+                                    <p><input type="number" min="0" max="50"step="10">&nbsp분</p>
+                                    </br></br></br>
+                                    <p><input type="submit" class="btn" id="home_btn" value="확인"></p>
+                                    </form>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DCare</title>
+        <meta charset="utf-8">
+        <style>
+            @font-face { /* 제주돌담체 폰트 적용 */
+              font-family: "jejudoldam";
+              src: url("font/jejudoldam.ttf") format("truetype");
+              font-weight: normal;
+            } /* 이후 "SDGothic"으로 폰트 적용 가능 */
+            @font-face {
+                font-family: 'KorailRoundGothicBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+                font-weight: 700;
+                font-style: normal;
+            }
+
+            body {
+                font-family: 'KorailRoundGothicBold';
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #DCare {
+                overflow:scroll;
+                margin: 0 auto;
+                width: 40%;
+                height: 100%;
+                background-color:   #BFE9F9;
+            }
+
+            #DCare::-webkit-scrollbar {
+                display: none; /* 크롬, 사파리, 오페라, 엣지 */
+            }
+
+            #content {
+                font-family: "jejudoldam";
+                text-align: center;
+                padding: 2%;
+            }
+
+            .info {
+                margin: 0 auto;
+                width:70%;
+                min-height:350px;
+                background-color:white;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+            }
+            .search {
+                margin-top: 50px;
+              position: relative;
+              width: 70%;
+              margin-bottom: 20px;
+            }
+
+            .search input {
+                margin-left: 90px;
+              width: 100%;
+              border: 1px solid #bbb;
+              border-radius: 8px;
+              padding: 10px 12px;
+              font-size: 14px;
+            }
+
+            .search img {
+              position : absolute;
+              left: 470px;
+              width: 17px;
+              top: 10px;
+              right: 12px;
+              margin: 0;
+            }
+
+            .search img:hover {
+                 filter :brightness(0) invert(1);
+            }
+
+            #direction {
+                margin: 0 auto;
+                width:543px;
+                min-height:350px;
+                background-color:white;
+                border-left: 5px solid gray;
+                border-right: 5px solid gray;
+                border-bottom: 5px solid gray;
+                padding: 5%;
+                padding-top: 10px;
+            }
+
+            .board {
+                float: left;
+                margin-right: 10px;
+                width: 100%
+
+            }
+
+            .board img {
+                padding-top: 20px;
+            }
+
+            .board h2 {
+                font-size: 20px;
+                margin-top: 0px;
+                float: right;
+            }
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div id='DCare'>
+            <a href="./splash.html"><img src="./image/로고글씨.png" width="200px"></a>
+            <div id="content">
+                <h1>병원정보</h1>
+                <div class="search">
+                    <input type="text" id="keyword" placeholder="검색어 입력">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" > <!--onclick="writeMap()"-->
+                </div>
+                <div class="info">
+                    <div id="map" style="width:100%;height:350px;"></div>
+                    <!--
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=14fe0178d695373677c87aa64aa04977&libraries=services"></script>
+                    <script>
+                    // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+                    var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                        mapOption = {
+                            center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+                            level: 3 // 지도의 확대 레벨
+                        };  
+
+                    // 지도를 생성합니다    
+                    var map = new kakao.maps.Map(mapContainer, mapOption); 
+                    function writeMap(){
+                        mapOption = {
+                                center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+                                level: 3 // 지도의 확대 레벨
+                            };  
+                        // 지도를 생성합니다    
+                        var map = new kakao.maps.Map(mapContainer, mapOption); 
+                        var ps = new kakao.maps.services.Places(); 
+                        var keyword = document.getElementById('keyword').value.toString() + " 동물병원";
+                        ps.keywordSearch(keyword, placesSearchCB); 
+                    
+
+                        // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+                        function placesSearchCB (data, status, pagination) {
+                            if (status === kakao.maps.services.Status.OK) {
+
+                                // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+                                // LatLngBounds 객체에 좌표를 추가합니다
+                                var bounds = new kakao.maps.LatLngBounds();
+
+                                for (var i=0; i<data.length; i++) {
+                                    displayMarker(data[i]);    
+                                    bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+                                }       
+
+                                // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+                                map.setBounds(bounds);
+                            } 
+                        }
+
+
+                        // 지도에 마커를 표시하는 함수입니다
+                        function displayMarker(place) {
+                            
+                            // 마커를 생성하고 지도에 표시합니다
+                            var marker = new kakao.maps.Marker({
+                                map: map,
+                                position: new kakao.maps.LatLng(place.y, place.x) 
+                            });
+
+                            // 마커에 클릭이벤트를 등록합니다
+                            kakao.maps.event.addListener(marker, 'click', function() {
+                                // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+                                infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
+                                infowindow.open(map, marker);
+                            });
+                        }
+
+                    }
+                    </script>
+                -->
+                </div>
+            </div>
+            <div id="direction">
+                <div class="board">
+                    <img src="" width="100px">
+                    <h2>
+                        <b style="margin-right: 140px;">무슨무슨병원</b><br>
+                        <p style="float: right margin-right: 300px;">
+                            <b>운영 상태:</b><br>
+                            <b>진료 시간:</b><br>
+                        </p>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="board">
+                    <img src="" width="100px">
+                    <h2>무슨무슨병원</h2>
+                    <hr>
+                </div>                
+                <div class="board">
+                    <img src="" width="100px">
+                    <h2>무슨무슨병원</h2>
+                    <hr>
+                </div>                
+                <div class="board">
+                    <img src="" width="100px">
+                    <h2>무슨무슨병원</h2>
+                    <hr>
+                </div>                
+                <div class="board">
+                    <img src="" width="100px">
+                    <h2>무슨무슨병원</h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DCare</title>
+        <style>
+            @font-face {
+                font-family: 'KorailRoundGothicBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+                font-weight: 700;
+                font-style: normal;
+            }
+
+            body {
+                font-family: 'KorailRoundGothicBold';
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #DCare {
+                overflow:scroll;
+                margin: 0 auto;
+                width: 40%;
+                height: 100%;
+                background-color: 	#BFE9F9;
+            }
+
+            #DCare::-webkit-scrollbar {
+                display: none; /* 크롬, 사파리, 오페라, 엣지 */
+            }
+
+            #content {
+                text-align: center;
+                padding: 2%;
+            }
+
+            .info {
+                width:100%;
+                min-height:500px;
+                background-color:white;
+                border-radius: 30px;
+            }
+
+            .imgbox {
+                margin: 0 auto;
+                width: 50px;
+                height: 50px; 
+                margin-top: 10%;
+                border-radius: 70%;
+                overflow: hidden;
+            }
+            .profile {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            input {
+                width: 80%;
+                height: 32px;
+                font-size: 15px;
+                border: 0;
+                border-radius: 15px;
+                outline: none;
+                padding-left: 10px;
+                background-color: rgb(233, 233, 233);
+                margin: 1%;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            table {
+                border-collapse: separate;
+                border-spacing: 0 10px;
+                border-collapse: collapse;
+            }
+            tr:nth-child(even) {
+                border-bottom: 1px solid #aaaaaa;
+            }
+
+            .submitbtn {
+                width: 100px;
+                background-color: #67B685;
+                border: 0px;
+                color: white;
+            }
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div id='DCare'>
+            <a href="./splash.html"><img src="./image/로고글씨.png" width="200px"></a>
+            <div id="content">
+                <h1>커뮤니티</h1>
+                <div class="info">
+                    <div style="margin-left:3%;">
+                        <h2 style="text-align:left;padding-top:3%;">글 제목</h2>
+                        <div>
+                            <div class="imgbox" style="background: #BDBDBD;margin-top:0px;float:left;width:30px;height:30px;">
+                                <img class="profile" src="./image/person.png">
+                            </div>
+                            <span style="float:left;margin-left:2%;line-height:30px;">작성자 ID</span>
+                            <span style="float:right;margin-right:2%;line-height:30px;color:gray;">2022-12-22 10:30</span>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <div style="margin-top:3%;">
+                            <img src="./image/poo.png" width="200px;">
+                            <div>강아지가 아파요.</div>
+                            <br>
+                            <div style="background-color:#FDFD96;padding:1%;margin-right:3%;min-height:300px;">
+                                <h2>DCare 예측 결과</h2>
+                                <div>
+                                    <img src="./image/poop.png" width="200px;" style="float:left;margin-right:4%;">
+                                    <div style="text-align:left;">
+                                        <h3 style="color:red;">붉은변</h3>
+                                        <span>ㅇ니ㅓ리젇리젇리ㅏ</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="margin-top:3%;">
+                            <span>조회수: 30</span>&nbsp;&nbsp;&nbsp;
+                            <span>좋아요:
+                                <a src="" style="vertical-align:middle;"><img src="./image/heart_color.png" width="25spx;"></a>
+                                52
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input id="search"><input type="submit" class="submitbtn" value="등록">
+                <div class='info'>
+                    <div style="padding-top:3%;">
+                        <table width="100%;">
+                            <tr>
+                                <th width="20%;">
+                                    <div class="imgbox" style="background: #BDBDBD;">
+                                        <img class="profile" src="./image/person.png">
+                                    </div>
+                                </th>
+                                <td style="font-size:20px;"><a href="">제목</a></td>
+                            </tr>
+                            <tr>
+                                <th>작성자 ID</th>
+                                <td><a href="" style="font-size:13px;">내용</a></td>
+                            </tr>
+                            <tr>
+                                <th width="20%;">
+                                    <div class="imgbox" style="background: #BDBDBD;">
+                                        <img class="profile" src="./image/person.png">
+                                    </div>
+                                </th>
+                                <td style="font-size:20px;"><a href="">제목</a></td>
+                            </tr>
+                            <tr>
+                                <th>작성자 ID</th>
+                                <td><a href="" style="font-size:13px;">내용</a></td>
+                            </tr>
+                            <tr>
+                                <th width="20%;">
+                                    <div class="imgbox" style="background: #BDBDBD;">
+                                        <img class="profile" src="./image/person.png">
+                                    </div>
+                                </th>
+                                <td style="font-size:20px;"><a href="">제목</a></td>
+                            </tr>
+                            <tr>
+                                <th>작성자 ID</th>
+                                <td><a href="" style="font-size:13px;">내용</a></td>
+                            </tr>
+                            <tr>
+                                <th width="20%;">
+                                    <div class="imgbox" style="background: #BDBDBD;">
+                                        <img class="profile" src="./image/person.png">
+                                    </div>
+                                </th>
+                                <td style="font-size:20px;"><a href="">제목</a></td>
+                            </tr>
+                            <tr>
+                                <th>작성자 ID</th>
+                                <td><a href="" style="font-size:13px;">내용</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

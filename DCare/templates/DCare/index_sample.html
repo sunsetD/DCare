@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>첫 화면인데 테스트 해봅니당</title>
+    <style>
+        table, td, th {
+            padding: 3px;
+            border : 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>DB 마이그레이션 테스트 페이지 입니당</h2>
+    <table class="table-contents">
+      <tr>
+        <th>제목</th>
+        <th>내용</th>
+      </tr>
+      {% for Counsel in posts %}
+        <tr>
+          <td>{{Counsel.cnselask}}</td>
+          <td>{{Counsel.cnselanswer}}</td>
+        </tr>
+      {%endfor%}
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DCare</title>
+        <style>
+            @font-face {
+                font-family: 'KorailRoundGothicBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+                font-weight: 700;
+                font-style: normal;
+            }
+
+            body {
+                font-family: 'KorailRoundGothicBold';
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #DCare {
+                overflow:scroll;
+                margin: 0 auto;
+                width: 40%;
+                height: 100%;
+                background-color: 	#BFE9F9;
+            }
+
+            #DCare::-webkit-scrollbar {
+                display: none; /* 크롬, 사파리, 오페라, 엣지 */
+            }
+
+            #content {
+                text-align: center;
+                padding: 2%;
+            }
+
+            .info {
+                margin: 0 auto;
+                width:70%;
+                min-height:450px;
+                background-color:white;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+            }
+
+            .imgbox {
+                margin: 0 auto;
+                width: 150px;
+                height: 150px; 
+                border-radius: 70%;
+                overflow: hidden;
+            }
+            .profile {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            input {
+                width: 90%;
+                height: 32px;
+                font-size: 15px;
+                border: 0;
+                border-radius: 15px;
+                outline: none;
+                padding-left: 10px;
+                background-color: rgb(233, 233, 233);
+                margin: 1%;
+            }
+
+            .updatebtn {
+                width: 100px;
+                background-color: #D94844;
+                border: 0px;
+                color: white;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div id='DCare'>
+            <img src="./image/로고글씨.png" width="200px">
+            <div id="content">
+                <h1>회원정보</h1>
+                <div class="info">
+                    <div class="imgbox" style="background: #BDBDBD;">
+                        <img class="profile" src="./image/person.png">
+                    </div><br><br>
+                    <table width="100%;">
+                        <tr>
+                            <th>아이디</th>
+                            <td><input id="memid" readonly></td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td><input id="memnm"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td><input id="memaddr "></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td><input id="memtel "></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td><input id="memtel "></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td><input id="memtel "></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center;"><input type="button" class="updatebtn" value="수정"></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <h1>반려견 정보</h1>
+                <div class="info" style="margin-bottom:1%;">
+                    <div class="imgbox" style="background: #BDBDBD;">
+                        <img class="profile" src="./image/dog.png">
+                    </div><br><br>
+                    <table width="100%;">
+                        <tr>
+                            <th>아이디</th>
+                            <td><input id="memid" readonly></td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td><input id="memnm"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td><input id="memaddr "></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td><input id="memtel "></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td><input id="memtel "></td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td><input id="memtel "></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center;"><input type="button" class="updatebtn" value="수정"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="float:right;">
+                    <a href="">
+                        <img src="./image/petplus.png" width="50px"><br>
+                        펫 추가
+                    </a>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

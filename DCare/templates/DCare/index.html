@@ -1,0 +1,188 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DCare</title>
+        <style>
+            @font-face { /* 제주돌담체 폰트 적용 */
+              font-family: "jejudoldam";
+              src: url("font/jejudoldam.ttf") format("truetype");
+              font-weight: normal;
+            } /* 이후 "SDGothic"으로 폰트 적용 가능 */
+            @font-face {
+                font-family: 'KorailRoundGothicBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+                font-weight: 700;
+                font-style: normal;
+            }
+
+            body {
+                font-size: 20px;
+                font-family: 'KorailRoundGothicBold';
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #DCare {
+                overflow:scroll;
+                margin: 0 auto;
+                width: 40%;
+                height: 100%;
+                background-color: 	#BFE9F9;
+            }
+
+            #DCare::-webkit-scrollbar {
+                display: none; /* 크롬, 사파리, 오페라, 엣지 */
+            }
+
+            #content {
+                font-family: "jejudoldam";
+                text-align: center;
+                padding: 2%;
+            }
+
+            .info {
+                margin: 0 auto;
+                width:50%;
+                min-height:250px;
+                background-color:white;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+            }
+
+            #dog {
+                z-index: 5;
+                margin: 0 auto;
+                width:50%;
+                height: 200px;
+            }
+
+            #status {
+                position: relative;
+                font-size: 20px;
+                width:100%;
+                vertical-align: bottom; 
+                text-align: right;
+            }
+
+            .heart{
+                --size: 1.6; 
+            }
+
+            .heart::before{
+                margin: 0 auto;
+                margin-top: 20px;
+                content: '❤';
+                display: inline-block;
+                color: pink;
+                font-size: 35px;
+                line-height: 1;
+                animation: heartbeat 2s infinite ease;
+            }
+
+            @keyframes heartbeat {
+                to {
+                    transform: scale(calc(var(--size)*2));
+                    opacity: 0;
+                }
+            }
+
+            #content2 {
+                font-family: "jejudoldam";
+                text-align: center;
+            }
+
+            #mypage {
+                margin: 0 auto;
+                width:70%;
+                min-height:100px;
+                background-color: #ffffcc;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+            }
+
+            #treat {
+                margin-left: 10%;
+                margin-right: 7%;
+                width:26%;
+                min-height:100px;
+                background-color: #cdffcc;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+                float: left;
+            }
+
+            #community {
+                margin-right: 10%;
+                width:26%;
+                min-height:100px;
+                background-color: #ffdeeb;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+                float: left;
+
+            }
+
+            #walk {
+                margin-left: 10%;
+                margin-right: 7%;
+                width:26%;
+                min-height:100px;
+                background-color: #f7deff;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+                float: left;
+            }
+
+            #hospital {
+                margin-right: 10%;
+                width:26%;
+                min-height:100px;
+                background-color: #c9d0ff;
+                border-radius: 30px;
+                margin-bottom: 5%;
+                padding: 5%;
+                float: left;
+
+            }
+
+            a { text-decoration: none; color: black; }
+            a:visited { text-decoration: none; }
+            a:hover { text-decoration: none; color: blue;}
+            a:focus { text-decoration: none; }
+            a:hover, a:active { text-decoration: none; }
+
+        </style>
+
+    </head>
+    <body>
+        <div id='DCare'>
+            <a href="./splash.html"><img src="./image/로고글씨.png" width="300px"></a>
+            <div id="content">
+                <h1>내 강아지: 뽀삐</h1>
+                <div class="info">
+                    <div class="heart"></div>
+                    <div id="dog">
+                        <img id="logoImg" src="./image/시바로고움짤.gif" width="150px" style="margin-top: 20px;"><br>
+                    </div>
+                    <div id="status">
+                        <b>상태: </b><b style="color: #eb5090;">행복함</b>
+                    </div>
+                </div>
+            </div>
+            <div id="content2">
+                <a href="./splash.html"><div id="mypage"><h1>마이페이지</h1></div></a>
+                <a href="./treat.html"><div id="treat"><h1>질병케어</h1></div></a>
+                <a href="./splash.html"><div id="community"><h1>커뮤니티</h1></div></a><br> 
+                <a href="./treat.html"><div id="walk"><h1>산책모드</h1></div></a>
+                <a href="./hospital.html"><div id="hospital"><h1>병원정보</h1></div></a> 
+            </div>
+        </div>
+    </body>
+</html>

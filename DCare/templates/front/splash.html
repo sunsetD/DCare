@@ -1,0 +1,81 @@
+<!---------------------- Splash Screen ----------------------->
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DCare</title>
+        <style>
+            @font-face { /* 제주돌담체 폰트 적용 */
+              font-family: "jejudoldam";
+              src: url("font/jejudoldam.ttf") format("truetype");
+              font-weight: normal;
+            } /* 이후 "SDGothic"으로 폰트 적용 가능 */
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translate3d(0, 100%, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateZ(0);
+                }
+            }
+            body {
+                font-family: 'jejudoldam';
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #DCare {
+                overflow:scroll;
+                margin: 0 auto;
+                width: 40%;
+                height: 100%;
+                background-color: 	#ffffff;
+                border: 5px solid #000000;
+                text-align : center;
+            }
+
+            #DCare::-webkit-scrollbar {
+                display: none; /* 크롬, 사파리, 오페라, 엣지 */
+            }
+            #logo {
+                padding-top: 15%;
+            }
+            #content {
+                animation: fadeInUp 0.5s;
+                text-align: center;
+                color: #000000;
+                padding: 5%;
+                line-height: 3px;
+            }
+            #divOuter {
+                text-align: center;
+            }
+            #titleContent {
+                display: inline-block;
+                width : 350px;
+                height : 350px;
+                border-radius: 50%;
+                background-color: #BFE9F9
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id='DCare'>
+            <div id="divOuter" style="padding-top: 140px;">
+                <div id="titleContent">
+                    <div id="logo">
+                        <a href="./login.html"><img id="logoImg" src="./image/시바로고움짤.gif" width="200px"></a>
+                        <h1 id="title">DCare</h1>
+                    </div>
+                </div>
+                <div id="content">
+                    <h1>강아지야 아프지 마</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

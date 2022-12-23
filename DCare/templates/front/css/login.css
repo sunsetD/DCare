@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#loginForm {
+    margin: auto;
+    width: 300px;
+    background-color: #EEEFF1;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    font-family: 'KorailRoundGothicBold';
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+}
+
+.in {
+    margin-bottom: 10px;
+}
+
+#btn {
+    background-color: #BFE9F9;
+    color: black;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #9B9B9B;
+    font-size: 13px;
+}
+
+button {
+  font-family: 'KorailRoundGothicBold';
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#google {
+  width: 100%;
+  background: #D93025;
+}
+
+#regist {
+  width: 30%;
+  background-color: blue;
+}
+
+a:hover {
+    color: blue;
+  }
